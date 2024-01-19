@@ -1,0 +1,63 @@
+      <div class="container is-flex is-justify-content-center">
+        <div class="columns">
+          <!-- Login Column -->
+          <div class="column is-half">
+            <div class="box">
+              <h1 class="title has-text-centered">Login</h1>
+              <form action="/api/users/login" class="login-form">
+                <div class="field">
+                  <label class="label">Username</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Your username" id="username-login">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Password</label>
+                  <div class="control">
+                    <input class="input" type="password" placeholder="Your password" id="password-login">
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <button class="button" id="loginBtn">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Sign Up Column -->
+          <div class="column is-half">
+            <div class="box">
+              <h1 class="title has-text-centered">Sign Up</h1>
+              <form action="/api/users" class="signup-form">
+                <div class="field">
+                  <label class="label">Username</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Choose a username" id="name-signup">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control">
+                    <input class="input" type="email" placeholder="Your email" id="email-signup">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Password</label>
+                  <div class="control">
+                    <input class="input" type="password" placeholder="Choose a password" id="password-signup">
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <button class="button" id="signBtn">Sign Up</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<script src="/js/login.js"></script>

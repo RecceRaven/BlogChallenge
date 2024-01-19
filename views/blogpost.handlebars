@@ -1,0 +1,52 @@
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-three-fifths is-offset-one-fifth">
+                    <div class="content">
+                        <h1 class="title is-2">{{post.title}}</h1>
+                        <p class="subtitle is-6">Posted by {{post.User.username}} on {{formatDate post.createdAt}}</p>
+                        <div class="content">
+                            {{{post.content}}}
+                        </div>
+                        <hr>
+                        <h2 class="title is-4">Comments</h2>
+                        {{#each post.comments}}
+                            <div class="box">
+                                <article class="media">
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>{{this.User.username}}</strong>
+                                                <br>
+                                                {{this.text}}
+                                                <br>
+                                                <small>{{formatDate this.createdAt}}</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        {{/each}}
+                        {{#if user}}
+                            <div class="box">
+                                <h3 class="title is-4">Add a Comment</h3>
+                                <form action="/add-comment/{{post.id}}" method="post">
+                                    <div class="field">
+                                        <label class="label">Your Comment</label>
+                                        <div class="control">
+                                            <textarea class="textarea" name="comment" placeholder="Write your comment here..." required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="button is-link" type="submit">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
